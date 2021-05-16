@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="root2"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <!-- 練習 -->
+    <script>
+      // bindのサンプル１
+      // function say() {
+      //   // console.log(this)
+      //   console.log('Hello, my name is ' + this)
+      //   // return ('Hello, my name is ' + this)
+      // }
+      // // console.log(this)
+      // // console.log(this.say)
+      // const taro = say.bind('Taro')
+      // const jiro = say.bind('Jiro')
+      // jiro()
+      // say()
+      // bind()は既にある関数に対して、引数thisを代入できる
+      // bind()は新しい関数を作るので、変数に代入して、関数なのでtaro()で呼び出す
+      // taro()
+      // console.log(taro())
+      // say()
+
+      // const sample = {
+      //   myFunction(){
+      //     console.log(this)
+      //     // myFunction関数を参照
+      //   }
+      // }
+      // sample.myFunction()
+
+      // const {a} = this
+      // console.log({a})
+
+      // // コンストラクタで呼び出し
+      // const Sample = function(price) {
+      //   this.price = price;
+      //   console.log(this) // Sample{price: 100}
+      // }
+      // const money = new Sample(100);
+      // console.log(money);
+
+      // var myObj = {
+      //   number: 1
+      // }
+      // function sample() {
+      //   console.log(this);
+      // }
+      // sample()
+      // console.log(this.myObj)
+      // sample.call(myObj);
+      // sample.apply(myObj);
+
+      // x = 'Global';
+      // let myFunc = () => {
+      //   console.log(this.x);
+      //   // console.log(this);
+      // }
+      // let y1 = {
+      //   param: 'y1',
+      //   func: myFunc
+      // }
+      // let y2 = {
+      //   param: 'y2',
+      //   func: myFunc
+      // }
+      // myFunc()
+      // y1.func();
+      // // y2.func();
+
+
+      // // bindのサンプル２
+      // function sum(x, y, z){
+      //   return x + y + z
+      // }
+      // const keisan = sum.bind(null, 10, 20, 30)
+      // console.log(keisan())
+
+
+      // Computed Property Name
+      // const items = ["a", "b", "c"]
+      // const obj = {
+      //   [items]: 'Hello' // {a,b,c: 'Hello'}
+      //   // a,b,cがkeyになったオブジェクトが出来上がる
+      // }
+      // console.log(obj)
+
+      let i = 0
+      let a = {
+        ['foo' + ++i] : i,
+        ['foo' + ++i] : i,
+        ['foo' + ++i] : i,
+      }
+      console.log(a) // {foo1: 1, foo2: 2, foo3: 3}
+      console.log(a.foo1) // 1
+
+     </script>
+
+  </body>
+</html>
