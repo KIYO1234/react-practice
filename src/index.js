@@ -12,12 +12,24 @@ class Welcome extends React.Component {
   }
 }
 
+// const Greeting = props => {
+//   console.log(props)
+//   // {name: 'kyosuke'}
+
+//   return (<h2>Hello, {props.name}</h2>)
+// }
+
+
+// React.Fragment
 const Greeting = props => {
   console.log(props)
   // {name: 'kyosuke'}
 
   return (<h2>Hello, {props.name}</h2>)
 }
+
+
+
 
 class Clock extends React.Component {
   // ②
@@ -624,7 +636,9 @@ class SingUpDialog extends React.Component {
       <Dialog title="Mars Exploration Program"
               message="How should we refer to you?">
         <input value={this.state.login}
-               onChange={this.handleChange} />
+               onChange={this.handleChange} 
+               placeholder="input"
+               />
         <button onClick={this.handleSignUp}>
           Sign Me Up!
         </button>
@@ -670,6 +684,33 @@ const WelcomeDialog = () => {
 //   );
 // }
 
+
+
+// テキスト用
+const Text = () => {
+  const numbers = [1,2,3,4,5]
+  const newNumbers = numbers.map(newNumber => newNumber * 2)
+  // mapだと空でも新しい配列に追加してしまう
+  const maps = numbers.map(newNumber => {
+    if(newNumber !== 3) {
+      return newNumber
+    }
+  }
+ )
+
+  const odds = numbers.filter(odd => odd % 2 !== 0)
+  
+  return (
+    <React.Fragment>
+      <h1>こんにちは</h1>
+      <h2>numbers：{numbers.join(',')}</h2>
+      <h2>newNumbers：{newNumbers.join(',')}</h2>
+      <h2>odds:{odds.join(',')}</h2>
+      <h2>maps:{maps.join(',')}</h2>
+    </React.Fragment>
+  )
+}
+
 ReactDOM.render(
   // ① => ⑥差分を表示
   // <Clock />,
@@ -688,7 +729,8 @@ ReactDOM.render(
   // <Blog posts={posts}/>,
   // <Reservation />,
   // <Calculator />,
-  <SingUpDialog />,
+  // <SingUpDialog />,
+  <Text />,
   document.getElementById('root')
 );
 
