@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
-import React from 'react';
+// import React from 'react';
+// ▲練習のため1行目を消去
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
