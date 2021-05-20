@@ -125,16 +125,36 @@
       // }
       // console.log(obj)
 
-      let i = 0
-      let a = {
-        ['foo' + ++i] : i,
-        ['foo' + ++i] : i,
-        ['foo' + ++i] : i,
-      }
-      console.log(a) // {foo1: 1, foo2: 2, foo3: 3}
-      console.log(a.foo1) // 1
+      // let i = 0
+      // let a = {
+      //   ['foo' + ++i] : i,
+      //   ['foo' + ++i] : i,
+      //   ['foo' + ++i] : i,
+      // }
+      // console.log(a) // {foo1: 1, foo2: 2, foo3: 3}
+      // console.log(a.foo1) // 1
+
+      // // 分割代入
+      // const [fruit, vegetable, w] = 'banana'
+      // console.log(fruit) // b
+      // console.log(vegetable) // a
+      // console.log(w) // n
+
+
+      // // スタック / ヒープ領域
+      // const object1 = {
+      //     a: 'somestring',
+      //     b: 42,
+      //     c: false
+      //   };
+      //   const object2 = object1;
+
+      //   object1.a = "変更しました"
+
+      //   console.log(Object.is(object1, object2)) //true
+
+      //   console.log(object2)
 
      </script>
-
   </body>
 </html>
