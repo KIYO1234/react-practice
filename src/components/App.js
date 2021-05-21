@@ -39,7 +39,6 @@ const mapStateToProps = state => ({
   todos: state.add.todos,
   id: state.add.id,
   key: state.add.id,
-  isDone: false,
 })
 
 const mapDispatchToProps = dispatch => ({

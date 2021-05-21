@@ -5,8 +5,6 @@ import {ADD, REMOVE, CHANGEISDONE} from '../actions'
 const initialState = {
     todos:[],
     id: 0,
-    index: 1,
-    isDone: false,
 }
 export default (state = initialState,  action) => {
     switch(action.type){
@@ -31,7 +29,6 @@ export default (state = initialState,  action) => {
             return {
                 id: state.id,
                 todos: removeTodos,
-                isDone: state.isDone,
             }
 
         case CHANGEISDONE:
